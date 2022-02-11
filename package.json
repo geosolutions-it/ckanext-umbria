@@ -1,0 +1,16 @@
+{
+  "name": "ckanext-umbria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-css": "lessc -x ckanext/umbria/public/less/main.less ckanext/umbria/public/base/css/main.css",
+    "watch-less": "less-watch-compiler ckanext/umbria/public/less/ ckanext/umbria/public/base/css main.less"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^3.11.2",
+    "less-watch-compiler": "^1.14.6"
+  }
+}

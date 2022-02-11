@@ -1,0 +1,189 @@
+body {
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: @bodyTextColor;
+    background-color: @brandDefaultColor;
+    font-family: @layoutFontFamily;
+
+  }
+
+
+.site-footer {
+    background: (@footerBgColor) url("@{bgPath}");
+}
+
+.homepage [role=main] {
+    padding: 20px 0 0 0;
+}
+
+.account-masthead {
+    background: (@brandPrimaryColor) url("@{bgPath}");
+}
+
+.hero {
+    background: @brandDefaultColor;
+}
+
+.search-form .search-input.search-giant button i {
+    font-size: 28px;
+    width: 28px;
+    color: @brandNotificationColor;
+}
+
+.homepage .module-search .search-giant input {
+    border-color: @brandPrimaryColor;
+}
+
+.simple-input .field .btn-search {
+    color: @brandNotificationColor;
+}
+
+/* Form */
+.stages li.active .highlight {
+    background: @brandNotificationColor;
+}
+
+
+/* top navigation */
+.masthead {
+.nav>li>a,
+    .nav>li>a:focus,
+    .nav>li>a:hover,
+    .nav>.active>a,
+    .nav>.active>a:hover,
+    .nav>.active>a:focus {
+        color: @link-color;
+        text-shadow: none;
+    }
+}
+/* Datatable navigation */
+.nav-tabs > li > a {
+    color: @link-color;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: @link-hover-focus-color;
+}
+
+
+
+.masthead .navigation .nav-pills li.active a,
+.masthead .navigation .nav-pills li a:hover {
+    color: @link-hover-focus-color;
+    background-color: transparent;
+}
+
+/* aside Module  */
+.main .secondary h2{
+    color: @brandNotificationColor;
+}
+
+.btn-default{
+    color: @brandNotificationColor;
+}
+
+.account-masthead .account ul li a {
+    color: @brandDefaultColor;
+}
+
+.nav-item.active, .nav-aside li.active,
+.nav-item.active > a, .nav-aside li.active a {
+    background-color: @link-hover-focus-color;
+}
+
+/* Footer */
+.site-footer, .site-footer a, .site-footer label {
+    color: @brandDefaultColor;
+}
+/* Home page */
+.homepage .module-search .tags {
+    background-color: @brandSecondaryColor;
+}
+
+.homepage-main .item-container {
+    margin: 20px 0;
+}
+
+
+/* Home page item */
+.item-summary {
+    margin: 16px;
+    width: 230px;
+    border-left: none;
+    border-radius: 0;
+    background: @brandDefaultColor;
+    border: 1px solid @brandSecondaryColor;
+    position: relative;
+    padding: 20px;
+    min-height: 130px;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.item-container .item-container-body {
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-img{
+    min-height: 200px;
+    vertical-align: middle;
+}
+
+.homepage-main .item-see-all {
+    text-align: right;
+    margin-top: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.item-container .item-container-head {
+    display: flex;
+    align-items: center;
+    color: @brandNotificationColor;
+}
+
+.item-container .item-container-head h3 {
+    flex: 1;
+}
+
+/* Button */
+.btn-primary:hover {
+    color: @brandDefaultColor;
+    background-color:@primary-button-hover;
+}
+
+/* label */
+.label[data-format=csv], .label[data-format*=csv] {
+    background-color: @brandNotificationColor;
+}
+/* Home page jumbotron */
+.container-fluid {
+    min-height: @jumbotronMinHeight;
+}
+.jumbotron {
+    background-image: url("@{jumbotronBg}"); /* fallback */
+    background-color: @brandPrimaryColor;
+    background-size: @jumbotronBgSize;
+    background-repeat: no-repeat;
+    background-position: @jumbotronBgPosition;
+    padding-bottom: 16px;
+    filter: saturate(0.75);
+}
+
+.jumbotron .lead {
+    color:  @brandDefaultColor;
+    font-weight: normal;
+    background-color: @brandNotificationColorTransparency;
+
+    margin-top: 150px;
+    font-size: 14px;
+    padding: 32px;
+    width: 70%;
+}
+
+.jumbotron a{
+    color: @brandSecondaryColor;
+}

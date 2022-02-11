@@ -1,0 +1,7 @@
+# Build stuff
+node_modules/
+*.pyc
+*egg-info
+
+# IDE stuff
+.idea/

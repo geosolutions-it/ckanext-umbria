@@ -1,0 +1,55 @@
+{%
+set aboutFirstBlock = ''
+%}
+
+{%
+set aboutSecondBlock = ''
+%}
+
+{% set landingPage = '' %}
+{% set domain = '' %}
+
+
+
+
+<div class="homepage-main" role="main">
+<!--
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            {% if aboutFirstBlock or aboutSecondBlock %}
+            <p class="lead">
+            {% trans %}
+                {{ aboutFirstBlock}}
+                <br></br>
+                {{ aboutSecondBlock}}
+
+            {% endtrans %}
+            <a href="{{ domain ~ landingPage }}" target="blank">
+                [....more]
+            </a>
+            </p>
+            {% endif %}
+        </div>
+    </div>
+-->
+    <div class="container">
+        <!-- S SEARCH -->
+        {% block search %}
+        {% snippet 'home/snippets/search.html' %}
+        {% endblock %}
+        <!-- E SEARCH -->
+    </div>
+
+    <div class="container sections">
+        <!-- S TOPICS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    {% snippet 'home/snippets/groups.html' %}
+                </div>
+            </div>
+        <!-- E TOPICS -->
+
+
+    </div>
+</div>
+<!-- E TEMPLATE 20180724-->

@@ -1,0 +1,14 @@
+<div class="item-summary">
+    <div class="item-img">
+        <a href="{{ dataset_url }}" class="item-header">
+            <img src="{{ thumbnail }}" width="200" />
+        </a>
+    </div>
+    <div class="item-title">
+        <a href="{{ item_url }}" class="item-header">
+            <h3 title="{{ title }}">{{ h.truncate(title, length=45, whole_word=True) }}</h3>
+        </a>
+        <div>{{ dataset_count }} datasets</div>
+    </div>
+
+</div>

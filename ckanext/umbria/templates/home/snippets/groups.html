@@ -1,0 +1,25 @@
+{% set groups = h.umbria_get_groups(limit=5) %}
+
+<div class="item-container">
+    <div class="item-container-head">
+        <h3 class="heading"><strong>{{ _('Groups') }}</strong></h3>
+        <a href="{{ h.url_for('group.index') }}">
+            <div class="item-see-all">{{_('See all')}} &raquo;</div>
+        </a>
+    </div>
+    <div class="item-container-body box">
+        {% if groups %}
+            {% for group in groups %}
+
+                {% set url = h.url_for('group_read', id=group.name) %}
+                {% snippet 'home/snippets/item.html',
+                    title=group.title,
+                    item_url=url,
+                    dataset_count= group.package_count,
+                    thumbnail=group.image_display_url %}
+            {% endfor %}
+        {% else %}
+            <strong>No groups</strong>
+        {% endif %}
+    </div>
+</div>
