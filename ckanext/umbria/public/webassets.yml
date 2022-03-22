@@ -1,0 +1,5 @@
+umbria-css:
+  contents:
+    - base/css/umbria.css
+  output: umbria/%(version)s_umbria.css
+  filters: cssrewrite
