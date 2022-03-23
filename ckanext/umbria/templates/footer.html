@@ -1,44 +1,76 @@
-{% set logo = '/base/img/open-data-umbria-logo.jpg' %}
-{% set domain = 'https://dati.umbria.it/' %}
-{% set customer = 'About Regione Umbria' %}
-{% set landingPage = 'chi-siamo' %}
-{% set powerdByDomain = 'https://www.geosolutionsgroup.com/' %}
-{% set powerdBy = 'GeoSolutions' %}
-
+{% set logoLeft = '/base/img/Logo_DPS.jpg' %}
+{% set logoMiddle = '/base/img/FSC.jpg' %}
+{% set logoRight = '/base/img/FSC_Umbria.jpg' %}
 
 <footer class="site-footer">
-    <div class="container">
-      {% block footer_content %}
-      <div class="row">
-        <div class="col-md-8 footer-links">
-            {% block header_logo %}
+  <hr class="hr3" style="background-color:#222; height:15px; margin:0px;">
+  <div class="container footer-top">
+    {% block footer_content %}
+    <div class="row container">
+      {% block header_logos %}
+      <section class="m-bottom">
+        <div class="col col-xs-4 text-left">
+          <a href="http://www.dps.mef.gov.it/"
+            ><img
+              src="{{ logoLeft }}"
+              title="Dipartimento per lo Sviluppo e la Coesione Economica"
+              style="max-width: 100%; height: auto"
+              alt="DPS"
+              align="top"
+          /></a>
+        </div>
 
-            <a class="logo" href="{{ domain }}">
-                <img src="{{ logo }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" />
-            </a>
-            {% endblock %}
-          {% block footer_nav %}
-            <ul class="list-unstyled">
-              {% block footer_links %}
-                <li><a href="{{ domain ~ landingPage }}" target="blank">{{ customer }}</a></li>
-              {% endblock %}
-            </ul>
-          {% endblock %}
+        <div class="col col-xs-4 text-center">
+          <a
+            href="http://www.dps.gov.it/it/politiche_e_attivita/Fondo_per_lo_Sviluppo_e_la_Coesione"
+            ><img
+              src="{{ logoMiddle }}"
+              title="Fondo per lo Sviluppo e la Coesione"
+              style="max-width: 100%; height: auto"
+              alt="FSC"
+              align="top"
+          /></a>
         </div>
-        <div class="col-md-4 attribution">
-          {% block footer_attribution %}
-            <p>{% trans %}<strong>Powered by</strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a>{% endtrans %}
-                and <strong><a href="{{ powerdByDomain }}">{{powerdBy}}</a></strong>
-            </p>
-          {% endblock %}
+
+        <div class="col col-xs-4 text-right">
+          <a
+            href="http://www.regione.umbria.it/che-cos-e-il-fondo-di-sviluppo-e-coesione-fsc"
+            ><img
+              src="{{  logoRight }}"
+              title="Fondo per lo Sviluppo e la Coesione Umbria"
+              style="max-width: 100%; height: auto"
+              alt="FSC Umbria"
+              align="top"
+          /></a>
         </div>
-      </div>
+      </section>
       {% endblock %}
     </div>
-
-    {% block footer_debug %}
-      {% if g.debug %}
-        {% include 'snippets/debug.html' %}
-      {% endif %}
     {% endblock %}
-  </footer>
+       <div class="container m-top">
+  <section class="container">
+		<div class="col-md-8 text-left" style="padding:0;">
+			<div class="span3">
+			  <address>
+			  <strong><a href="http://www.regione.umbria.it/" target="_blank">Regione Umbria</a></strong><br>
+			  Corso Vannucci, 96<br>
+			  06121 Perugia<br>
+				<a href="mailto:opendata@regione.umbria.it">opendata@regione.umbria.it</a><br>
+				<a href="mailto:regione.giunta@postacert.umbria.it" style="color: rgb(51, 122, 183);">regione.giunta@postacert.umbria.it</a><br>
+				P.IVA 01212820540<br>
+			  </address>
+			</div>
+		</div>
+		<div class="col-md-4 text-right">
+			<p><a href="#top" style="color: rgb(51, 122, 183);">Back to top</a></p>
+		</div>
+  </section>
+   	</div>
+  </div>
+
+  {% block footer_debug %}
+    {% if g.debug %}
+      {% include 'snippets/debug.html' %}
+    {% endif %}
+  {% endblock %}
+</footer>
