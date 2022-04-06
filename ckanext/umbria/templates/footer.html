@@ -1,44 +1,173 @@
-{% set logo = '/base/img/open-data-umbria-logo.jpg' %}
-{% set domain = 'https://dati.umbria.it/' %}
-{% set customer = 'About Regione Umbria' %}
-{% set landingPage = 'chi-siamo' %}
-{% set powerdByDomain = 'https://www.geosolutionsgroup.com/' %}
-{% set powerdBy = 'GeoSolutions' %}
-
+{% set logoLeft = '/base/img/Logo_DPS.jpg' %}
+{% set logoMiddle = '/base/img/FSC.jpg' %}
+{% set logoRight = '/base/img/FSC_Umbria.jpg' %}
+{% set bottomLogo = '/base/img/logo-datiumbria_footer.png' %}
 
 <footer class="site-footer">
-    <div class="container">
-      {% block footer_content %}
-      <div class="row">
-        <div class="col-md-8 footer-links">
-            {% block header_logo %}
+  <hr class="hr3" style="background-color:#255667; height:15px; margin:0px;">
+  <div class="container footer-top">
+    {% block footer_content %}
+    <div class="row container">
+      {% block header_logos %}
+      <section class="m-bottom">
+        <div class="col col-xs-4 text-left">
+          <a href="http://www.dps.mef.gov.it/"
+            ><img
+              src="{{ logoLeft }}"
+              title="Dipartimento per lo Sviluppo e la Coesione Economica"
+              style="max-width: 100%; height: auto"
+              alt="DPS"
+              align="top"
+          /></a>
+        </div>
 
-            <a class="logo" href="{{ domain }}">
-                <img src="{{ logo }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" />
-            </a>
-            {% endblock %}
-          {% block footer_nav %}
-            <ul class="list-unstyled">
-              {% block footer_links %}
-                <li><a href="{{ domain ~ landingPage }}" target="blank">{{ customer }}</a></li>
-              {% endblock %}
-            </ul>
-          {% endblock %}
+        <div class="col col-xs-4 text-center">
+          <a
+            href="http://www.dps.gov.it/it/politiche_e_attivita/Fondo_per_lo_Sviluppo_e_la_Coesione"
+            ><img
+              src="{{ logoMiddle }}"
+              title="Fondo per lo Sviluppo e la Coesione"
+              style="max-width: 100%; height: auto"
+              alt="FSC"
+              align="top"
+          /></a>
         </div>
-        <div class="col-md-4 attribution">
-          {% block footer_attribution %}
-            <p>{% trans %}<strong>Powered by</strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a>{% endtrans %}
-                and <strong><a href="{{ powerdByDomain }}">{{powerdBy}}</a></strong>
-            </p>
-          {% endblock %}
+
+        <div class="col col-xs-4 text-right">
+          <a
+            href="http://www.regione.umbria.it/che-cos-e-il-fondo-di-sviluppo-e-coesione-fsc"
+            ><img
+              src="{{  logoRight }}"
+              title="Fondo per lo Sviluppo e la Coesione Umbria"
+              style="max-width: 100%; height: auto"
+              alt="FSC Umbria"
+              align="top"
+          /></a>
         </div>
-      </div>
+      </section>
       {% endblock %}
     </div>
-
-    {% block footer_debug %}
-      {% if g.debug %}
-        {% include 'snippets/debug.html' %}
-      {% endif %}
     {% endblock %}
-  </footer>
+       <div class="container m-top">
+  <section class="container">
+  <div class="row" style="display:flex;justify-content:space-between;flex-wrap:wrap;padding:0 20px;width:100%;">
+		<div class="" style="flex:0.3;">
+			<img class="img-fluid" src="{{ bottomLogo }}" alt="{{ g.site_title }}" title="{{ g.site_title }}">
+		</div>
+		<div class="" style="padding:0;flex:0.3;">
+			<div class="span3">
+			  <address>
+			  <strong><a href="http://www.regione.umbria.it/" target="_blank">Regione Umbria</a></strong><br>
+			  Corso Vannucci, 96<br>
+			  06121 Perugia<br>
+				<a href="mailto:opendata@regione.umbria.it">opendata@regione.umbria.it</a><br>
+				<a href="mailto:regione.giunta@postacert.umbria.it" style="color:#fff;">regione.giunta@postacert.umbria.it</a><br>
+				P.IVA 01212820540<br>
+			  </address>
+			</div>
+		</div>
+    <div style="flex:0.2;">
+     <h5>{% trans %}Follow us on{% endtrans %}</h5>
+     <a href="http://test.dati.umbria.it/#" target="_blank">
+     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="33.794" viewBox="0 0 34 33.794" title="Facebook">
+      <path id="facebook-brands" d="M42,25A17,17,0,1,0,22.344,41.794V29.914H18.025V25h4.319V21.255c0-4.26,2.536-6.614,6.421-6.614a26.163,26.163,0,0,1,3.806.332v4.181H30.426a2.457,2.457,0,0,0-2.77,2.655V25h4.715l-.754,4.914H27.656v11.88A17.006,17.006,0,0,0,42,25Z" transform="translate(-8 -8)" fill="#fff"></path>
+    </svg></a>
+     <a href="http://test.dati.umbria.it/#" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+      <g id="Raggruppa_13" data-name="Raggruppa 13" transform="translate(-1485 -365)">
+     <circle id="tw-ellips" data-name="Ellisse 2" cx="17" cy="17" r="17" transform="translate(1485 365)" fill="#fff"></circle>
+        <path id="twitter-brands" d="M15.288,51.531c.011.151.011.3.011.454a9.868,9.868,0,0,1-9.936,9.936A9.869,9.869,0,0,1,0,60.354a7.225,7.225,0,0,0,.843.043A6.994,6.994,0,0,0,5.179,58.9a3.5,3.5,0,0,1-3.265-2.422,4.4,4.4,0,0,0,.66.054,3.693,3.693,0,0,0,.919-.119,3.493,3.493,0,0,1-2.8-3.427v-.043a3.517,3.517,0,0,0,1.579.443A3.5,3.5,0,0,1,1.189,48.72a9.927,9.927,0,0,0,7.2,3.654,3.942,3.942,0,0,1-.086-.8,3.5,3.5,0,0,1,6.044-2.389,6.876,6.876,0,0,0,2.216-.843,3.483,3.483,0,0,1-1.535,1.925,7,7,0,0,0,2.011-.541A7.507,7.507,0,0,1,15.288,51.531Z" transform="translate(1493.48 327.101)" fill="#014e66"></path>
+       </g>
+      </svg></a>
+    </div>
+    <div style="flex:0.2;">
+      <h5>{% trans %}Powered by{% endtrans %}</h5> <p class="text-left footer-credit">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <a class="hide-text ckan-footer-logo" href="http://ckan.org">ckan</a><br><a class="hide-text ckan-footer-logo m-auto m-md-0" href="http://ckan.org/"></a>and <a class="hide-text" href="https://www.geosolutionsgroup.com/"><strong>GeoSolutions</strong></a></p>
+      {% set current_lang = request.environ.CKAN_LANG %}
+<form action="{% url_for 'util.internal_redirect' %}" method="POST">
+  <p style="margin-bottom:0;">{{ _('Language') }}</p>
+  <div class="language_buttons">
+    {% for locale in h.get_available_locales() %}
+      <button type="submit" name="url" value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.short_name == current_lang %}selected="selected"{% endif %}>
+      {% set source = '/base/img/' + locale.short_name + '.png' %}
+       <img src="{{ source }}" height="16" width="16" alt="{{ locale.display_name }}"> {{ locale.display_name or locale.english_name }}
+      </button>
+    {% endfor %}
+  </div>
+</form>
+    </div>
+    </div>
+  </section>
+		<div class="col-md-4 text-right">
+			<div class="move-top"><a href="#top">^</a></div>
+		</div>
+   	</div>
+  </div>
+{% block header_account %}
+<div class="account-masthead">
+  <div class="container">
+    {% block header_account_container_content %} {% if c.userobj %}
+    <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
+      <ul class="list-unstyled">
+        {% block header_account_logged %} {% if c.userobj.sysadmin %}
+        <li>
+          <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}">
+            <i class="fa fa-gavel" aria-hidden="true"></i>
+            <span class="text">{{ _('Admin') }}</span>
+          </a>
+        </li>
+        {% endif %}
+        <li>
+          <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="image" title="{{ _('View profile') }}">
+                  {{ h.user_image((c.user if c and c.user else ''), size=22) }}
+                  <span class="username">{{ c.userobj.display_name }}</span>
+                </a>
+        </li>
+        {% set new_activities = h.new_activities() %}
+        <li class="notifications {% if new_activities > 0 %}notifications-important{% endif %}">
+          {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)', new_activities)
+          %}
+          <a href="{{ h.url_for('dashboard.index') }}" title="{{ notifications_tooltip }}">
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            <span class="text">{{ _('Dashboard') }}</span>
+            <span class="badge">{{ new_activities }}</span>
+          </a>
+        </li>
+        {% block header_account_settings_link %}
+        <li>
+          <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Profile settings') }}">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+            <span class="text">{{ _('Profile settings') }}</span>
+          </a>
+        </li>
+        {% endblock %} {% block header_account_log_out_link %}
+        <li>
+          <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span class="text">{{ _('Log out') }}</span>
+          </a>
+        </li>
+        {% endblock %} {% endblock %}
+      </ul>
+    </div>
+    {% else %}
+    <nav class="account not-authed" aria-label="{{ _('Account') }}">
+      <ul class="list-unstyled">
+        {% block header_account_notlogged %}
+        <li>{% link_for _('Log in'), named_route='user.login' %}</li>
+        {% if h.check_access('user_create') %}
+        <li>{% link_for _('Register'), named_route='user.register', class_='sub' %}</li>
+        {% endif %} {% endblock %}
+      </ul>
+    </nav>
+    {% endif %} {% endblock %}
+  </div>
+</div>
+{% endblock %}
+  {% block footer_debug %}
+    {% if g.debug %}
+      {% include 'snippets/debug.html' %}
+    {% endif %}
+  {% endblock %}
+</footer>

@@ -3,3 +3,10 @@ umbria-css:
     - base/css/umbria.css
   output: umbria/%(version)s_umbria.css
   filters: cssrewrite
+
+umbria-js:
+  contents:
+    - scripts/mobile-menu.js
+    - scripts/scroll-top.js
+  filters: rjsmin
+  output: umbria/%(version)s_mobile-menu.js
