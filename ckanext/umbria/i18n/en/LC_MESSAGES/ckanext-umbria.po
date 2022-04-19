@@ -1,0 +1,71 @@
+# English (United Kingdom) translations for ckanext-dcatapit.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the ckanext-dcatapit
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-dcatapit 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-10-29 12:08+0100\n"
+"PO-Revision-Date: 2016-11-28 12:06+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_GB\n"
+"Language-Team: en_GB <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/dcatapit/schema.py:157
+msgid "Editor label"
+msgstr "Organization"
+
+#: ckanext/dcatapit/schema.py:183
+msgid "Editor email label"
+msgstr "Contact email"
+
+#: ckanext/dcatapit/schema.py:184
+msgid "Editor email help"
+msgstr "servizio@regione.umbria.it"
+
+#: ckanext/dcatapit/schema.py:186
+msgid "Editor email info"
+msgstr "Contact email"
+
+#: ckanext/dcatapit/schema.py:193
+msgid "Editor site label"
+msgstr "Organization site url"
+
+#: ckanext/dcatapit/schema.py:194
+msgid "Editor site help"
+msgstr ""
+
+#: ckanext/dcatapit/schema.py:196
+msgid "Editor site info"
+msgstr "Organization site url"
+
+#: ckanext/dcatapit/schema.py:248
+msgid "GeoNames COVERAGE"
+msgstr "GeoNames geographical coverage"
+
+#: ckanext/dcatapit/schema.py:258
+msgid "SI REF label"
+msgstr "Geographical reference system"
+
+#: ckanext/dcatapit/schema.py:259
+msgid "Enter SI REF"
+msgstr ""
+
+#: ckanext/dcatapit/schema.py:261
+msgid "SI REF help"
+msgstr ""
+
+#: ckanext/dcatapit/templates/macros/dcatapit_form_macros.html:73
+msgid "Select organization"
+msgstr ""
+
+#~ msgid "SI REF info"
+#~ msgstr "Geographical reference system"

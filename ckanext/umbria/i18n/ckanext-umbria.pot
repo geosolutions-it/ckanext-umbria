@@ -1,0 +1,13 @@
+
+msgid "GeoNames COVERAGE"
+msgstr ""
+
+msgid "SI REF label"
+msgstr ""
+
+msgid "Enter SI REF"
+msgstr ""
+
+msgid "SI REF help"
+msgstr ""
+

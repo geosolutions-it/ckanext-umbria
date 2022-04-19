@@ -1,5 +1,6 @@
 import logging
 
+from ckan.lib.plugins import DefaultTranslation
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.common import _
@@ -9,10 +10,11 @@ from ckanext.dcatapit.interfaces import ICustomSchema, ICustomOrganizationSchema
 log = logging.getLogger(__name__)
 
 
-class UmbriaPlugin(plugins.SingletonPlugin):
+class UmbriaPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.ITranslation)
 
     plugins.implements(ICustomSchema)
     plugins.implements(ICustomOrganizationSchema)
@@ -94,6 +96,9 @@ class UmbriaPlugin(plugins.SingletonPlugin):
                 'placeholder': _('Organizational Unit Responsible Competence Area'),
                 'vocabulary_name': None,
                 'data_module_source': None,
+            },
+            'geographical_geonames_url': {
+                'label': _('GeoNames COVERAGE'),
             },
         }
 
