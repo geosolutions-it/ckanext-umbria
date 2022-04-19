@@ -29,9 +29,9 @@ class UmbriaDCATAPProfile(RDFProfile):
         org_dict = _get_org(dataset_dict.get('owner_org'))
 
         # Remove previous poc
-        # for s, p, o in g.triples((dataset_ref, DCAT.contactPoint, None)):
-        #     log.info(f"UmbriaProfile: Removing contactPoint {o}")
-        #     g.remove((s, p, o))
+        for s, p, o in g.triples((dataset_ref, DCAT.contactPoint, None)):
+            log.info(f"UmbriaProfile: Removing contactPoint {o}")
+            g.remove((s, p, o))
 
         # Add new poc
         pub_name = dataset_dict.get('publisher_name')
