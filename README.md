@@ -18,16 +18,23 @@ Based on [ckanext-geosolutions-ui](https://github.com/geosolutions-it/ckanext-ge
     ```
     git clone https://github.com/geosolutions-it/ckanext-umbria.git
     cd ckanext-umbria
-	pip install -r requirements.txt
+    pip install -r requirements.txt
     pip install -e .
     ```
-3. Add `umbria` to the `ckan.plugins` setting in your CKAN
+3. Add `umbria` to the `ckan.plugins` setting in your CKAN ini file
 
     ```
     vim /etc/ckan/default/ckan.ini
     ```
 
-4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
+4. Add `umbria_dcat_ap` to the `ckanext.dcat.rdf.profiles` setting in your CKAN ini file,
+   so that it reads:
+
+    ```
+    ckanext.dcat.rdf.profiles = euro_dcat_ap it_dcat_ap umbria_dcat_ap
+    ```
+
+5. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
      ```
      sudo service apache2 reload
      ```

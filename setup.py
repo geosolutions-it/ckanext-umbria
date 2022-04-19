@@ -83,7 +83,10 @@ setup(
     entry_points='''
         [ckan.plugins]
         umbria=ckanext.umbria.plugin:UmbriaPlugin
-
+        
+        [ckan.rdf.profiles]
+        umbria_dcat_ap=ckanext.umbria.profile:UmbriaDCATAPProfile
+        
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
     ''',
