@@ -64,11 +64,11 @@ class UmbriaDCATAPProfile(RDFProfile):
         publisher = self.g.value(subject=dataset_ref, predicate=DCT.publisher, object=None, any=False)
 
         if publisher:
-            for key, predicate in (
-                    ('publisher_email', FOAF.mbox),
-                    ('publisher_url', FOAF.homepage),
+            for key, predicate, otype in (
+                    ('publisher_email', FOAF.mbox, Literal),
+                    ('publisher_url', FOAF.homepage, URIRef),
             ):
-                self.g.add((publisher, predicate, Literal(self._get_dict_value(dataset_dict, key, 'N/A'))))
+                self.g.add((publisher, predicate, otype(self._get_dict_value(dataset_dict, key, 'N/A'))))
 
 
 def _get_org(org_id):
