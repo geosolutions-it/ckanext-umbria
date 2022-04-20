@@ -6,6 +6,7 @@ from rdflib import URIRef, BNode, Literal
 import ckan.logic as logic
 
 from ckanext.dcat.profiles import RDFProfile, DCAT, LOCN, VCARD, DCT, FOAF, ADMS, OWL, SCHEMA, TIME
+from ckanext.dcatapit.dcat.profiles import remove_unused_object
 
 DCATAPIT = Namespace('http://dati.gov.it/onto/dcatapit#')
 
@@ -32,6 +33,7 @@ class UmbriaDCATAPProfile(RDFProfile):
         for s, p, o in g.triples((dataset_ref, DCAT.contactPoint, None)):
             log.info(f"UmbriaProfile: Removing contactPoint {o}")
             g.remove((s, p, o))
+            remove_unused_object(g, o, "contactPoint (UMBRIA)")
 
         # Add new poc
         pub_name = dataset_dict.get('publisher_name')
