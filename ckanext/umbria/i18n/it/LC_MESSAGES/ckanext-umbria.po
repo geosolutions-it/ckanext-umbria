@@ -63,5 +63,9 @@ msgstr ""
 msgid "SI REF help"
 msgstr ""
 
-#~ msgid "SI REF info"
-#~ msgstr "Sistema di riferimento geografico"
+
+msgid "Language"
+msgstr "Lingua"
+
+msgid "Theme"
+msgstr "URL dei temi"

@@ -5,7 +5,9 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.common import _
 
+from ckanext.dcatapit.helpers import get_dcatapit_package_schema
 from ckanext.dcatapit.interfaces import ICustomSchema, ICustomOrganizationSchema
+from ckanext.dcatapit.schema import FIELD_THEMES_AGGREGATE
 
 log = logging.getLogger(__name__)
 
@@ -31,7 +33,16 @@ class UmbriaPlugin(plugins.SingletonPlugin, DefaultTranslation):
     def get_helpers(self):
         return {
             'umbria_get_groups': umbria_get_groups,
+            'get_dcatapit_package_schema': UmbriaPlugin.get_umbria_cached_package_schema,
         }
+
+    CACHED_PACKAGE_SCHEMA = None
+
+    @classmethod
+    def get_umbria_cached_package_schema(cls):
+        if cls.CACHED_PACKAGE_SCHEMA is None:
+            cls.CACHED_PACKAGE_SCHEMA = get_umbria_package_schema()
+        return cls.CACHED_PACKAGE_SCHEMA
 
     # ICustomSchema
     # ------------------------------------------------------------
@@ -100,6 +111,9 @@ class UmbriaPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'geographical_geonames_url': {
                 'label': _('GeoNames COVERAGE'),
             },
+            'publisher': {
+                'label': _('Editor label'),
+            },
         }
 
     def get_custom_org_schema(self):
@@ -126,3 +140,35 @@ def umbria_get_groups(limit=10):
                 'limit': limit
             }
         )
+
+
+def get_umbria_package_schema():
+    dcatapit_schema = get_dcatapit_package_schema()
+
+    def get_schema_field(name):
+        for field in dcatapit_schema:
+            if field['name'] == name:
+                return field
+
+        raise ValueError(f'Field not found {name}')
+
+    return [get_schema_field(name) for name in [
+        # 'identifier',
+        FIELD_THEMES_AGGREGATE,
+        'publisher',
+        'publisher_email',
+        'publisher_url',
+        'issued',
+        'modified',
+        'frequency',
+        'geographical_name',
+        'geographical_geonames_url',
+        'geographical_si_ref',
+        'temporal_coverage',
+        #'language',
+        'rights_holder',
+        #'is_version_of',
+        #'conforms_to',
+        'alternate_identifier',
+        'creator',
+    ]]
