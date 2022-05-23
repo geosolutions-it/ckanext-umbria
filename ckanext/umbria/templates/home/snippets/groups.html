@@ -11,7 +11,7 @@
         {% if groups %}
             {% for group in groups %}
 
-                {% set url = h.url_for('group_read', id=group.name) %}
+                {% set url = h.url_for('group.read', id=group.name) %}
                 {% snippet 'home/snippets/item.html',
                     title=group.title,
                     item_url=url,
