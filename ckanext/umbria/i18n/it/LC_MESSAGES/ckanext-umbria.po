@@ -69,3 +69,15 @@ msgstr "Lingua"
 
 msgid "Theme"
 msgstr "URL dei temi"
+
+msgid "Datasets List"
+msgstr "Lista dataset"
+
+msgid "Info and contacts"
+msgstr "Info e contatti"
+
+msgid "Categories"
+msgstr "Categorie"
+
+msgid "Data and Resources"
+msgstr "Dati e Risorse"

@@ -6,10 +6,10 @@
         <ul class="nav nav-pills">
             {% block header_site_navigation_tabs %}
 		{{ h.build_nav_main(
-		    ('dataset.search', _('Datasets')),
+		    ('dataset.search', _('Datasets List')),
 		    ('organization.index', _('Organizations')),
 		    ('group.index', _('Categories')),
-		    ('home.about', _('About')) ) }}
+          ) }}
 	    {% endblock %}
       <li>
         <a href="/linked-data">{% trans %}Linked Data{% endtrans %}</a>
