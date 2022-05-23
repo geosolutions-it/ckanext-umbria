@@ -79,5 +79,48 @@ msgstr "Info e contatti"
 msgid "Categories"
 msgstr "Categorie"
 
+msgid "Groups"
+msgstr "Categorie"
+
+msgid "Group"
+msgstr "Categoria"
+
+msgid "Add to group"
+msgstr "Aggiungi alla categoria"
+
+msgid "Add Group"
+msgstr "Aggiungi una categoria"
+
+msgid "{number} group found for \"{query}\""
+msgid_plural "{number} groups found for \"{query}\""
+msgstr[0] "{number} categoria trovata per \"{query}\""
+msgstr[1] "{number} categorie trovate per \"{query}\""
+
+msgid "{number} group found"
+msgid_plural "{number} groups found"
+msgstr[0] "{number} categoria trovata"
+msgstr[1] "{number} categorie trovate"
+
+msgid "Create a Group"
+msgstr "Crea una categoria"
+
+msgid "Update Group"
+msgstr "Aggiorna categoria"
+
+msgid "Create Group"
+msgstr "Crea categoria"
+
 msgid "Data and Resources"
 msgstr "Dati e Risorse"
+
+msgid "UMBRIA Author"
+msgstr "Responsabile struttura"
+
+msgid "UMBRIA Author Email"
+msgstr "Mail responsabile struttura"
+
+msgid "UMBRIA Maintainer"
+msgstr "Responsabile tecnico"
+
+msgid "UMBRIA Maintainer Email"
+msgstr "Mail responsabile tecnico"
