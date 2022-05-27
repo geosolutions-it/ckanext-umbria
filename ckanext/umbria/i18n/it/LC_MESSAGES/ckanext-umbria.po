@@ -71,7 +71,7 @@ msgid "Theme"
 msgstr "URL dei temi"
 
 msgid "Datasets List"
-msgstr "Lista dataset"
+msgstr "Lista Dataset"
 
 msgid "Info and contacts"
 msgstr "Info e contatti"
