@@ -73,9 +73,11 @@
     </div>
   </div>
 
-    <div class="collapse navbar-collapse">
-      {{ nav_Menus() }}
-    </div>
+  <div id="sticky-nav-wrapper">
+      <div class="collapse navbar-collapse" id="sticky-top">
+        {{ nav_Menus() }}
+      </div>
+  </div>
 
 {% block mobile_menu %}
 <div class="mobile-menu">
