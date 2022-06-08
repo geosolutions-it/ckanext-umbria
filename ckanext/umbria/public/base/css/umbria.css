@@ -4385,7 +4385,7 @@ input[type=submit].btn-block {
 }
 
 .collapse.in {
-    display: block
+    display: block !important;
 }
 
 tr.collapse.in {
@@ -13725,8 +13725,8 @@ a.logo.logo-left img {
   background-color: unset;
 }
 
-.masthead .navigation .nav-pills li a:hover, 
-.masthead .navigation .nav-pills li a:focus,
-.masthead .navigation .nav-pills li.active a:hover {
+.masthead .navigation .nav-pills li:not(.active) a:hover, 
+.masthead .navigation .nav-pills li:not(.active) a:focus,
+.masthead .navigation .nav-pills li.active:hover {
     background-color: #004f68;
 }
