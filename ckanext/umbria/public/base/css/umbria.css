@@ -12014,12 +12014,6 @@ h4 small {
     margin-bottom: 0
 }
 
-.masthead .navigation .nav-pills li a:focus,
-.masthead .navigation .nav-pills li a:hover,
-.masthead .navigation .nav-pills li.active a {
-    background-color: rgba(0, 0, 0, .1)
-}
-
 .masthead .nav>.active>a,
 .masthead .nav>.active>a:focus,
 .masthead .nav>.active>a:hover,
@@ -13725,4 +13719,14 @@ a.logo.logo-left img {
 .masthead .navigation .nav-pills li a:focus {
   outline: 2px solid orange;
   outline-offset: -8px;
+}
+
+.masthead .navigation .nav-pills li.active a {
+  background-color: unset;
+}
+
+.masthead .navigation .nav-pills li a:hover, 
+.masthead .navigation .nav-pills li a:focus,
+.masthead .navigation .nav-pills li.active a:hover {
+    background-color: #004f68;
 }
