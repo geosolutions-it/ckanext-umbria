@@ -140,6 +140,16 @@
     {% else %}
     <nav class="account not-authed" aria-label="{{ _('Account') }}">
       <ul class="list-unstyled">
+        <li>
+          <a href="/cms/privacy" title="{{ _('Privacy') }}">{{ _('Privacy') }}</a>
+        </li>
+        <li>
+          <a href="/cms/notelegali" title="{{ _('Note legali') }}">{{ _('Note legali') }}</a>
+        </li>
+        <li>
+          <a href="/cms/accessibilita" title="{{ _('Dichiarazione di accessibilità') }}">{{ _('Dichiarazione di accessibilità') }}</a>
+        </li>
+
         {% block header_account_notlogged %}
         <li>{% link_for _('Log in'), named_route='user.login' %}</li>
         {% if h.check_access('user_create') %}
